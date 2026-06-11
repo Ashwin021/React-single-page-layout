@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ML React Single Page</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            background: #f2f2f2;
+            font-family: Georgia, serif;
+        }
+
+        header, footer {
+            background: #2f4354;
+            color: white;
+            text-align: center;
+            padding: 35px;
+        }
+
+        section {
+            background: white;
+            margin: 25px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+function Header() {
+    return (
+        <header>
+            <h1>Machine Learning Website</h1>
+            <p>React Single Page Application</p>
+        </header>
+    );
+}
+
+function About() {
+    return (
+        <section>
+            <h2>About ML</h2>
+            <p>
+                Machine Learning helps computers learn from data
+                and make predictions.
+            </p>
+        </section>
+    );
+}
+
+function Topics() {
+    return (
+        <section>
+            <h2>ML Topics</h2>
+            <ul>
+                <li>Python</li>
+                <li>Pandas</li>
+                <li>NumPy</li>
+                <li>Model Training</li>
+            </ul>
+        </section>
+    );
+}
+
+function Footer() {
+    return (
+        <footer>
+            <p>© 2026 Machine Learning Application</p>
+        </footer>
+    );
+}
+
+function App() {
+    return (
+        <div>
+            <Header />
+            <About />
+            <Topics />
+            <Footer />
+        </div>
+    );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+
+</script>
+
+</body>
+</html>
